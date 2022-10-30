@@ -1,0 +1,5 @@
+pytest --alluredir=/Users/metju29/PycharmProjects/python-selenium/search_hotel/page_object_pattern/raports -n=2
+
+allure serve /Users/metju29/PycharmProjects/python-selenium/search_hotel/page_object_pattern/raports
+
+

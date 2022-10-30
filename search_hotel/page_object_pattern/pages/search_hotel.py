@@ -24,6 +24,7 @@ class SearchHotelPage:
     def set_date_range(self, day_in, day_out):
         self.logger.info("Setting check in {checkin} and {checkout} dates.".format(checkin=day_in, checkout=day_out))
         self.driver.find_element(By.XPATH, SearchHotelLocators.check_in_input).click()
+        self.driver.find_element(By.XPATH, SearchHotelLocators.next_th).click()
         self.driver.find_elements(By.XPATH, SearchHotelLocators.day_in_td)[day_in].click()
         self.driver.find_elements(By.XPATH, SearchHotelLocators.day_out_td)[day_out].click()
         allure.attach(self.driver.get_screenshot_as_png(), name="set_date_range", attachment_type=AttachmentType.PNG)

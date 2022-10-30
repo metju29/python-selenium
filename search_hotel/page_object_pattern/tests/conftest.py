@@ -1,18 +1,13 @@
 import allure
-from allure_commons.types import AttachmentType
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-
 import pytest
+
+from allure_commons.types import AttachmentType
+from search_hotel.page_object_pattern.utils.driver_factory import DriverFactory
 
 
 @pytest.fixture()
 def setup(request):
-    options = Options()
-    options.add_argument("--kiosk")
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    driver = DriverFactory.get_driver("chrome")
     driver.implicitly_wait(10)
     request.cls.driver = driver
     before_failed = request.session.testsfailed

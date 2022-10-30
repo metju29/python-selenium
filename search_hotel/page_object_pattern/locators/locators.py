@@ -4,6 +4,7 @@ class SearchHotelLocators:
     searchbox_input = "//div[contains(@class, 'select2-drop-active')]//input"
     searchbox_result_ul = "//ul[@class='select2-result-sub']"
     check_in_input = "//input[@name='checkin']"
+    next_th = "//div[9]/div[1]//tr[1]/th[@class='next']"
     day_in_td = "//div[9]/div[1]//tr/td[@class='day ']"
     day_out_td = "//div[10]/div[1]//tr/td[@class='day ']"
     travellers_input = "//input[@id='travellersInput']"
