@@ -5,7 +5,7 @@ from selenium_page_object_tutorial.locators import MainPageLocators
 class SearchTextElement(BasePageElement):
     """This class gets the search text from the specified locator"""
 
-    # The locator for search box where search string is entered
+    pass
 
 
 class BasePage(object):

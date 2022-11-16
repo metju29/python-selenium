@@ -10,8 +10,7 @@ class BasePageElement(object):
     #     driver = obj.driver
     #     locator = value[0]
     #     text = value[1]
-    #     WebDriverWait(driver, 100).until(
-    #         lambda driver: driver.find_element(By.NAME, locator))
+    #     WebDriverWait(driver, 100).until(lambda driver: driver.find_element(By.NAME, locator))
     #     driver.find_element(By.NAME, locator).clear()
     #     driver.find_element(By.NAME, locator).send_keys(text)
 
@@ -19,7 +18,7 @@ class BasePageElement(object):
         """Gets the text of the specified object"""
 
         driver = obj.driver
-        WebDriverWait(driver, 100).until(
-             lambda driver: driver.find_element(By.NAME, 'q'))
+        WebDriverWait(driver, 100).until(lambda driver: driver.find_element(By.NAME, 'q'))
         driver.find_element(By.NAME, 'q').clear()
         driver.find_element(By.NAME, 'q').send_keys('pycon')
+        return driver.find_element(By.NAME, 'q').is_displayed()

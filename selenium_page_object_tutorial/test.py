@@ -1,4 +1,3 @@
-import time
 import unittest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -6,7 +5,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import selenium_page_object_tutorial.page as page
 
 
-# noinspection PyStatementEffect
 class PythonOrgSearch(unittest.TestCase):
     """A sample test class to show how page object works"""
 
@@ -25,12 +23,12 @@ class PythonOrgSearch(unittest.TestCase):
         # Checks if the word "Python" is in title
         self.assertTrue(main_page.is_title_matches(), "python.org title doesn't match.")
         # Sets the text of search textbox to "pycon"
+        # noinspection PyStatementEffect
         main_page.search_text_element
         main_page.click_go_button()
         search_results_page = page.SearchResultsPage(self.driver)
         # Verifies that the results page is not empty
         self.assertTrue(search_results_page.is_results_found(), "No results found.")
-        time.sleep(5)
 
     def tearDown(self):
         self.driver.close()
