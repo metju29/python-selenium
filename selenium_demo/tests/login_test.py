@@ -6,7 +6,6 @@ from selenium_demo.pages.my_account_page import MyAccountPage
 @pytest.mark.usefixtures("setup")
 class TestLogIn:
 
-
     def test_log_in_passed(self):
         my_acc_page = MyAccountPage(self.driver)
 
@@ -28,4 +27,3 @@ class TestLogIn:
         msg1 = "ERROR: Incorrect username or password."
         msg2 = "ERROR: Too many failed login attempts."
         assert msg1 or msg2 in my_acc_page.get_error_msg()
-

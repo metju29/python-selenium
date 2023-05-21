@@ -31,3 +31,17 @@ class EditAddressPageLocators:
     billing_city_input = (By.CSS_SELECTOR, "#billing_city")
     billing_phone_input = (By.CSS_SELECTOR, "#billing_phone")
     save_address_button = (By.CSS_SELECTOR, "[name=save_address]")
+
+class BillingAddressLocators:
+
+    addresses_link = (By.LINK_TEXT, "Addresses")
+    edit_link = (By.XPATH, "//div[@class='u-column1 col-1 woocommerce-Address']//a[@class=\"edit\"]")
+    first_name_input = (By.ID, "billing_first_name")
+    last_name_input = (By.ID, "billing_last_name")
+    country_select = (By.ID, "billing_country")
+    address_input = (By.ID, "billing_address_1")
+    postcode_input = (By.ID, "billing_postcode")
+    city_input = (By.ID, "billing_city")
+    phone_input = (By.ID, "billing_phone")
+    save_address_button = (By.NAME, "save_address")
+    message_div = (By.XPATH, "//div[@class=\"woocommerce-message\"]")
